@@ -137,7 +137,7 @@ const HomeSection: React.FC = () => {
               >
                 <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-red-400 to-red-600 p-2">
                   <img
-                    src="public/homeprofile.jpg"
+                    src="/homeprofile.jpg"
                     alt="Chandy Neat"
                     className="w-full h-full object-cover rounded-2xl"
                   />

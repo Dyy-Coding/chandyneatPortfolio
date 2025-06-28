@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Portfolio Website',
       description: 'A modern full-stack portfolio showcasing my skills, projects, and technical experience. Built with user-friendly navigation, interactive design, and sections for about, skills, projects, testimonials, and downloadable CV.',
-      image: 'public/project/portfolio.png',
+      image: '/project/portfolio.png',
       tech: ['PHP', 'MVC Architecture', 'MySQL', 'Cloud Hosting (AWS)',"Tailwind"],
       category: 'Full-Stack',
       liveUrl: 'https://chandyneat-student-info.site/',
@@ -33,7 +33,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Inventory Managment System',
       description: 'A team-built Inventory Management System using PHP MVC and MySQL. Developed through sprint-based collaboration with GitHub version control and Jira task tracking. Features include material tracking, stock management, supplier integration, and sales reporting.',
-      image: 'public/project/vc1.jpg',
+      image: '/project/vc1.jpg',
       tech: ['JavaScript', 'PHP', 'MVC Architecture', 'MySQL','Cloud Hosting (AWS)','Jira','GitHub','Tailwind'],
       category: 'Full-Stack',
       liveUrl: '#',
@@ -44,7 +44,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Weather App',
       description: 'A modern weather app that fetches real-time weather data using a Weather API, saves recent searches with Local Storage, and is styled with SASS for a clean, responsive interface. Built for great UX with smooth animations and modular, maintainable code.',
-      image: 'public/project/wheather app.png',
+      image: '/project/wheather app.png',
       tech: ['Figma', 'HTML', 'CSS', "SASS","GitHub","JavaScript","Local Strorage"],
       category: 'Backend',
       liveUrl: '#',
@@ -55,7 +55,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'WordPress Deployment',
       description: 'Cloud-deployed WordPress on AWS Ubuntu. Setup LAMP stack and DNS.',
-      image: 'public/project/softwareDeployment.jpg',
+      image: '/project/softwareDeployment.jpg',
       tech: ['WordPress', 'GoDaddy', 'AWS','MobaTerm','Linux(Ubuntu)'],
       category: 'Full-Stack',
       liveUrl: '#',
@@ -66,7 +66,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Object Tracking',
       description: 'Used YOLOv8 for tracking objects via webcam. ID labeling and real-time metrics.',
-      image: 'public/project/objectTracking.jpg',
+      image: '/project/objectTracking.jpg',
       tech: ['Algorithm(Python)', 'OpenCV', 'Ultralytics YOLOv8', 'PyTorch','collections','random','time'],
       category: 'Artificial Intelligence',
       liveUrl: '#',
@@ -77,7 +77,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Face Recognition',
       description: 'Developed a face recognition-based attendance system. The system detects faces via webcam, logs attendance automatically in Excel, and provides voice feedback. Responsible for back-end logic, facial recognition integration, and data handling.',
-      image: 'public/project/faceReconition.jpg',
+      image: '/project/faceReconition.jpg',
       tech: ['Algorithm(Python)',
               "OpenCV",
               "face_recognition",
@@ -101,7 +101,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Music Website Project',
       description: 'Maintained clean, readable code by enforcing HTML, CSS, and SASS standards; resolved bugs through GitHub collaboration; and ensured cross-browser responsiveness and code efficiency through constructive feedback.',
-      image: 'public/project/music band image.png',
+      image: '/project/music band image.png',
       tech: ['Figma', 'HTML','SASS','CSS', 'GitHub'],
       category: 'Frontend',
       liveUrl: '#',
@@ -112,7 +112,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Brochure Design',
       description: 'I led a small team in using Figma for collaborative design and conducted UX/UI research through browser-based analysis, ensuring efficiency and user-centered innovation.',
-      image: 'public/project/brochure.jpg',
+      image: '/project/brochure.jpg',
       tech: ['Figma'],
       category: 'Design',
       liveUrl: '#',

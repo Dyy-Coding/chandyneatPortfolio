@@ -14,14 +14,14 @@ const TestimonialsSection: React.FC = () => {
       name: 'Rady Y',
       role: 'PNC WEP Coordinator',
       company: 'Passerelles Numériques Cambodia',
-      image: 'public/teacher/rady.jpg',
+      image: '/teacher/rady.jpg',
       quote: 'Chandy is a technically strong student with excellent problem-solving skills. His passion for coding and attention to detail make him stand out in web development.'
     },
     {
       name: 'Sovanchansreyleap Kheng',
       role: 'PNC English Trainer',
       company: 'Passerelles Numériques Cambodia',
-      image: 'public/teacher/leap.jpg',
+      image: '/teacher/leap.jpg',
       quote: 'Chandy is a creative and skilled student who consistently delivers quality work. He’s dedicated, reliable, and always eager to learn.'
     }
   ];

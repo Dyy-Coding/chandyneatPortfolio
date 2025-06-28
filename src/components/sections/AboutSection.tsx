@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
                 transition={{ duration: 0.4 }}
               >
                 <img
-                  src="public/aboutprifle.jpg"
+                  src="/aboutprifle.jpg"
                   alt="Chandy Neat"
                   className="w-full h-full object-cover"
                 />

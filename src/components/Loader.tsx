@@ -64,7 +64,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
               whileHover={{ scale: 1.05 }}
             >
               <img
-                src="public/loadprofile.jpg"
+                src="/loadprofile.jpg"
                 alt="Chandy Neat"
                 className="w-full h-full object-cover"
               />
