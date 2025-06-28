@@ -15,7 +15,7 @@ const NavItem: React.FC<NavItemProps> = ({ section, active, onClick }) => {
     return (
       <li className="flex items-center">
         <motion.a
-          href="public/ChandyNeat_CV.pdf"
+          href="/ChandyNeat_CV.pdf"
           download
           target="_blank"
           rel="noopener noreferrer"
