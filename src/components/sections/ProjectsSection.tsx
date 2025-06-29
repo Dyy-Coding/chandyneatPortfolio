@@ -58,7 +58,7 @@ const ProjectsSection: React.FC = () => {
       image: '/project/wheather app.png',
       tech: ['Figma', 'HTML', 'CSS', "SASS","GitHub","JavaScript","Local Strorage"],
       category: 'Backend',
-      liveUrl: '#',
+      liveUrl: 'https://dyy-coding.github.io/G3-JavaScript-project-Wheather-App/',
       githubUrl: 'https://github.com/Dyy-Coding/G3-JavaScript-project-Wheather-App.git',
       featured: false,
       status: 'Completed'
