@@ -73,7 +73,7 @@ const ContactSection: React.FC = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/chandy-neat-b26423372/',
       color: 'hover:text-blue-600',
       bg: 'hover:bg-blue-50 dark:hover:bg-blue-900/30'
     },
