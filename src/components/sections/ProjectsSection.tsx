@@ -19,6 +19,17 @@ const ProjectsSection: React.FC = () => {
   ];
 
   const projects = [
+     {
+      title: 'OOP  E-commerce Business Logic',
+      description: 'OOP structures e-commerce operations into reusable classes like Product, User, Cart, and Order, applying principles like encapsulation and inheritance. It separates business logic (like pricing, checkout, inventory) for better scalability, maintainability, and cleaner code architecture.',
+      image: '/project/oop-ecomerce.jpg',
+      tech: ['TypeScript', 'OOP Architecture', 'GitHub'],
+      category: 'Backend',
+      liveUrl: '#',
+      githubUrl: 'https://github.com/Dyy-Coding/OOP-Ecomerce.git',
+      featured: true,
+      status: 'Completed'
+    },
     {
       title: 'Portfolio Website',
       description: 'A modern full-stack portfolio showcasing my skills, projects, and technical experience. Built with user-friendly navigation, interactive design, and sections for about, skills, projects, testimonials, and downloadable CV.',
@@ -117,6 +128,17 @@ const ProjectsSection: React.FC = () => {
       category: 'Design',
       liveUrl: '#',
       githubUrl: '#',
+      featured: false,
+      status: 'Completed'
+    },
+    {
+      title: 'Youtube Interface',
+      description: 'I designed a static YouTube interface during my Term 1 web development course using HTML and CSS, focusing on layout, styling, and replicating a familiar UI to strengthen my understanding of responsive design principles.',
+      image: '/project/youtube.png',
+      tech: ['Figma','HTML','CSS'],
+      category: 'Frontend',
+      liveUrl: 'https://dyy-coding.github.io/YoutubeInterface/',
+      githubUrl: 'https://github.com/Dyy-Coding/YoutubeInterface.git',
       featured: false,
       status: 'Completed'
     }
@@ -266,8 +288,8 @@ const ProjectsSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           {[
-            { label: 'Total Projects', value: '8+', icon: Code },
-            { label: 'Completed', value: '8', icon: Globe },
+            { label: 'Total Projects', value: '10+', icon: Code },
+            { label: 'Completed', value: '10', icon: Globe },
             { label: 'In Progress', value: '0', icon: Terminal },
             { label: 'Technologies', value: '10+', icon: Database }
           ].map((stat, index) => (

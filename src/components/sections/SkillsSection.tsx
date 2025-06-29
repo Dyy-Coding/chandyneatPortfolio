@@ -191,7 +191,7 @@ const SkillsSection: React.FC = () => {
               className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
               whileHover={{ y: -5 }}
             >
-              <div className="text-3xl font-bold text-red-500 mb-2">8+</div>
+              <div className="text-3xl font-bold text-red-500 mb-2">10+</div>
               <div className="text-gray-600 dark:text-gray-300">Projects Built</div>
             </motion.div>
           </div>
