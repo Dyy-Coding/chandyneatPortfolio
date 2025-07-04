@@ -30,10 +30,13 @@ const SkillsSection: React.FC = () => {
       bgColor: 'bg-green-50 dark:bg-green-900/20',
       borderColor: 'border-green-200 dark:border-green-800',
       skills: [
-        { name: 'PHP', level: 80, icon: '🐘' },
-        { name: 'Laravel', level: 75, icon: '🔥' },
-        { name: 'Node.js', level: 55, icon: '🟢' },
-      ]
+                { name: 'PHP', level: 80, icon: '🐘' },          // Elephant mascot
+                { name: 'Laravel', level: 75, icon: '🚀' },      // Rocket for speed/framework
+                { name: 'Node.js', level: 55, icon: '🌿' },      // Green leaf for JS/eco
+                { name: 'TypeScript', level: 55, icon: '🟦' },   // Blue square matches TS color
+                { name: 'Python', level: 50, icon: '🐍' }        // Snake mascot
+              ]
+
     },
     {
       category: 'Database Management',
@@ -59,7 +62,7 @@ const SkillsSection: React.FC = () => {
         { name: 'Jira', level: 50, icon: '📋' },
         { name: 'Power BI', level: 50, icon: '📊' },
         { name: 'AWS Cloud', level: 50, icon: '☁️' },
-        { name: 'WordPress', level: 60, icon: '𝗪' },
+        { name: 'WordPress', level: 70, icon: '𝗪' },
       ]
     }
   ];
