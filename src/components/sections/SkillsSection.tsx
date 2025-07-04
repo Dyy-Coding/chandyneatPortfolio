@@ -32,7 +32,7 @@ const SkillsSection: React.FC = () => {
       skills: [
         { name: 'PHP', level: 80, icon: '🐘' },
         { name: 'Laravel', level: 75, icon: '🔥' },
-        { name: 'Node.js', level: 70, icon: '🟢' },
+        { name: 'Node.js', level: 55, icon: '🟢' },
       ]
     },
     {
@@ -59,6 +59,7 @@ const SkillsSection: React.FC = () => {
         { name: 'Jira', level: 50, icon: '📋' },
         { name: 'Power BI', level: 50, icon: '📊' },
         { name: 'AWS Cloud', level: 50, icon: '☁️' },
+        { name: 'WordPress', level: 60, icon: '𝗪' },
       ]
     }
   ];

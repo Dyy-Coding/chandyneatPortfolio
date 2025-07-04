@@ -20,6 +20,28 @@ const ProjectsSection: React.FC = () => {
 
   const projects = [
      {
+      title: 'NGO Website',
+      description: 'I designed and developed an NGO website focused on geography and climate in Cambodia using Figma for UI/UX design and WordPress for development.',
+      image: '/project/NGOwebsite.jpg',
+      tech: ['Figma', 'WordPress','GitHub'],
+      category: 'Full-Stack',
+      liveUrl: '#',
+      githubUrl: '#',
+      featured: true,
+      status: 'Progress'
+    },
+     {
+      title: 'Library App',
+      description: 'I developed a Library App using Laravel, MySQL, HTML, and Tailwind CSS, organizing features like book management and borrowing through Laravel’s MVC structure.',
+      image: '/project/libraryApp.jpg',
+      tech: ['PHP', 'Laravel', 'MySQL',"Tailwind","GitHub"],
+      category: 'Full-Stack',
+      liveUrl: '#',
+      githubUrl: '#',
+      featured: true,
+      status: 'Progress'
+    },
+     {
       title: 'OOP  E-commerce Business Logic',
       description: 'OOP structures e-commerce operations into reusable classes like Product, User, Cart, and Order, applying principles like encapsulation and inheritance. It separates business logic (like pricing, checkout, inventory) for better scalability, maintainability, and cleaner code architecture.',
       image: '/project/oop-ecomerce.jpg',
@@ -290,7 +312,7 @@ const ProjectsSection: React.FC = () => {
           {[
             { label: 'Total Projects', value: '10+', icon: Code },
             { label: 'Completed', value: '10', icon: Globe },
-            { label: 'In Progress', value: '0', icon: Terminal },
+            { label: 'In Progress', value: '2', icon: Terminal },
             { label: 'Technologies', value: '10+', icon: Database }
           ].map((stat, index) => (
             <motion.div
