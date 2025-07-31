@@ -15,31 +15,42 @@ const ProjectsSection: React.FC = () => {
     { name: 'Frontend', icon: Palette, color: 'text-green-500' },
     { name: 'Backend', icon: Database, color: 'text-purple-500' },
     { name: 'Design', icon: Palette, color: 'text-pink-500' },
-    { name: 'Artificial Intelligence', icon: CircuitBoard, color: 'text-pink-500' },
+    { name: 'Software', icon: CircuitBoard, color: 'text-pink-500' },
   ];
 
   const projects = [
+    {
+      title: 'Security Authentication',
+      description: 'This project uses Java Spring Boot to build secure and scalable backend APIs, handling authentication, data management, and business logic. The frontend is developed with Next.js, providing a fast, responsive, and modern user experience.',
+      image: 'https://www.thesslstore.com/blog/wp-content/uploads/2021/05/client-authentication-certificate-feature.jpg',
+      tech: ['Java', 'Next.js','GitHub',"Spring Boot"],
+      category: 'Full-Stack',
+      liveUrl: '#',
+      githubUrl: 'https://github.com/Dyy-Coding/Java_Library_System.git',
+      featured: true,
+      status: 'In Progress'
+    },
      {
       title: 'NGO Website',
       description: 'I designed and developed an NGO website focused on geography and climate in Cambodia using Figma for UI/UX design and WordPress for development.',
       image: '/project/NGOwebsite.jpg',
-      tech: ['Figma', 'WordPress','GitHub'],
-      category: 'Full-Stack',
-      liveUrl: '#',
-      githubUrl: '#',
+      tech: ['Figma', 'Next.js','GitHub',"Vercel"],
+      category: 'Frontend',
+      liveUrl: 'https://kheobs.vercel.app/',
+      githubUrl: 'https://github.com/Dyy-Coding/KHEOBS.git',
       featured: true,
-      status: 'Progress'
+      status: 'Completed'
     },
      {
       title: 'Library App',
       description: 'I developed a Library App using Laravel, MySQL, HTML, and Tailwind CSS, organizing features like book management and borrowing through Laravel’s MVC structure.',
       image: '/project/libraryApp.jpg',
-      tech: ['PHP', 'Laravel', 'MySQL',"Tailwind","GitHub"],
+      tech: ['PHP', 'Laravel', 'MySQL',"Vue.js","Tailwind","GitHub"],
       category: 'Full-Stack',
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Dyy-Coding/A5-Assignment-Monday.git',
       featured: true,
-      status: 'Progress'
+      status: 'Completed'
     },
      {
       title: 'OOP  E-commerce Business Logic',
@@ -101,7 +112,7 @@ const ProjectsSection: React.FC = () => {
       description: 'Used YOLOv8 for tracking objects via webcam. ID labeling and real-time metrics.',
       image: '/project/objectTracking.jpg',
       tech: ['Algorithm(Python)', 'OpenCV', 'Ultralytics YOLOv8', 'PyTorch','collections','random','time'],
-      category: 'Artificial Intelligence',
+      category: 'Software',
       liveUrl: '#',
       githubUrl: 'https://github.com/Dyy-Coding/Yolo-Sceen-Object-project-Pyhton.git',
       featured: false,
@@ -125,7 +136,7 @@ const ProjectsSection: React.FC = () => {
               "datetime",
               "pyttsx3",
               "GitHub",],
-      category: 'Artificial Intelligence',
+      category: 'Software',
       liveUrl: '#',
       githubUrl: 'https://github.com/Dyy-Coding/Face_Detection_Project.git',
       featured: false,
@@ -310,9 +321,9 @@ const ProjectsSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           {[
-            { label: 'Total Projects', value: '10+', icon: Code },
+            { label: 'Total Projects', value: '11+', icon: Code },
             { label: 'Completed', value: '10', icon: Globe },
-            { label: 'In Progress', value: '2', icon: Terminal },
+            { label: 'In Progress', value: '1', icon: Terminal },
             { label: 'Technologies', value: '10+', icon: Database }
           ].map((stat, index) => (
             <motion.div

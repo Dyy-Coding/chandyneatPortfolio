@@ -20,7 +20,9 @@ const SkillsSection: React.FC = () => {
         { name: 'CSS3', level: 85, icon: '🎨' },
         { name: 'JavaScript', level: 80, icon: '⚡' },
         { name: 'Vue.js', level: 75, icon: '💚' },
-        { name: 'Tailwind CSS', level: 50, icon: '🌀' }, 
+        { name: 'Next.js', level: 40, icon: '📦' },
+        { name: 'Tailwind CSS', level: 70, icon: '🌀' }, // Swirl for Tailwind
+      
       ]
     },
     {
@@ -34,6 +36,8 @@ const SkillsSection: React.FC = () => {
                 { name: 'Laravel', level: 75, icon: '🚀' },      // Rocket for speed/framework
                 { name: 'Node.js', level: 55, icon: '🌿' },      // Green leaf for JS/eco
                 { name: 'TypeScript', level: 55, icon: '🟦' },   // Blue square matches TS color
+                { name: 'Java', level: 40, icon: '☕' },           // Coffee cup = Java
+                { name: 'Spring Boot', level: 30, icon: '🌱' },    // Seedling = Spring Boot
                 { name: 'Python', level: 50, icon: '🐍' }        // Snake mascot
               ]
 
@@ -46,7 +50,7 @@ const SkillsSection: React.FC = () => {
       borderColor: 'border-purple-200 dark:border-purple-800',
       skills: [
         { name: 'MySQL', level: 85, icon: '🗄️' },
-        { name: 'MariaDB', level: 70, icon: '📊' },
+        { name: 'PostgresQL', level: 50, icon: '🐘' },
       ]
     },
     {
@@ -188,7 +192,7 @@ const SkillsSection: React.FC = () => {
               className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
               whileHover={{ y: -5 }}
             >
-              <div className="text-3xl font-bold text-red-500 mb-2">10+</div>
+              <div className="text-3xl font-bold text-red-500 mb-2">12+</div>
               <div className="text-gray-600 dark:text-gray-300">Technologies</div>
             </motion.div>
             <motion.div
