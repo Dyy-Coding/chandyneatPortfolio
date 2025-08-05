@@ -32,9 +32,9 @@ const ProjectsSection: React.FC = () => {
     },
      {
       title: 'NGO Website',
-      description: 'I designed and developed an NGO website focused on geography and climate in Cambodia using Figma for UI/UX design and WordPress for development.',
+      description: 'I designed and developed a bilingual NGO website focused on geography and climate change in Cambodia. I created the UI/UX using Figma, ensuring a clean, accessible, and user-friendly experience tailored for both local and international audiences. The project has two versions: a WordPress version for content flexibility and ease of use, and a high-performance, modern version built with Next.js for optimized speed, SEO, and scalability.',
       image: '/project/NGOwebsite.jpg',
-      tech: ['Figma', 'Next.js','GitHub',"Vercel"],
+      tech: ['Figma','WordPress', 'Next.js','GitHub',"Vercel"],
       category: 'Frontend',
       liveUrl: 'https://kheobs.vercel.app/',
       githubUrl: 'https://github.com/Dyy-Coding/KHEOBS.git',
