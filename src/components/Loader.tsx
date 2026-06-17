@@ -25,7 +25,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-gradient-to-br from-red-500 via-red-600 to-red-700 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex items-center justify-center z-50"
       initial={{ opacity: 1 }}
       animate={{ opacity: progress === 100 ? 0 : 1 }}
       transition={{ duration: 0.8, delay: progress === 100 ? 0.3 : 0 }}
@@ -94,7 +94,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
               👋
             </motion.span>
             <motion.span
-              className="mt-2 bg-gradient-to-r from-white to-red-100 bg-clip-text text-transparent"
+              className="mt-2 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1 }}
@@ -109,14 +109,14 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.3 }}
           >
-            Chandy Neat - Web Developer
+            Chandy Neat - Software Engineer
           </motion.p>
         </motion.div>
 
         {/* Progress Bar */}
         <div className="w-80 h-3 bg-white/20 rounded-full overflow-hidden border border-white/30 backdrop-blur-sm mx-auto">
           <motion.div
-            className="h-full bg-gradient-to-r from-white via-red-200 to-white rounded-full relative shadow-lg"
+            className="h-full bg-gradient-to-r from-white via-indigo-200 to-white rounded-full relative shadow-lg"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ ease: "easeOut", duration: 0.3 }}

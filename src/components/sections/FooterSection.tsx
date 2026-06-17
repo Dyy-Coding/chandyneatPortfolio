@@ -22,7 +22,7 @@ const FooterSection: React.FC = () => {
       name: 'Email',
       icon: Mail,
       url: 'mailto:chandy.neat@example.com',
-      color: 'hover:text-red-400',
+      color: 'hover:text-indigo-400',
       description: 'Send me a message'
     }
   ];
@@ -61,11 +61,11 @@ const FooterSection: React.FC = () => {
             >
               <div className="mb-6">
                 <h3 className="text-3xl font-bold mb-2">
-                  <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">
                     Chandy Neat
                   </span>
                 </h3>
-                <p className="text-gray-400 text-lg">Web Developer</p>
+                <p className="text-gray-400 text-lg">Software Engineer</p>
               </div>
               
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
@@ -75,11 +75,11 @@ const FooterSection: React.FC = () => {
 
               <div className="flex items-center space-x-4 text-gray-400">
                 <div className="flex items-center space-x-2">
-                  <Code className="w-5 h-5 text-red-400" />
+                  <Code className="w-5 h-5 text-indigo-400" />
                   <span>Clean Code</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Coffee className="w-5 h-5 text-red-400" />
+                  <Coffee className="w-5 h-5 text-indigo-400" />
                   <span>Fueled by Coffee</span>
                 </div>
               </div>
@@ -96,13 +96,13 @@ const FooterSection: React.FC = () => {
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <motion.a
-                      href={link.href}
-                      className="text-gray-400 hover:text-red-400 transition-colors duration-300 flex items-center space-x-2 group"
-                      whileHover={{ x: 5 }}
-                    >
-                      <span className="w-2 h-2 bg-red-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                      <span>{link.name}</span>
-                    </motion.a>
+                       href={link.href}
+                       className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 flex items-center space-x-2 group"
+                       whileHover={{ x: 5 }}
+                     >
+                       <span className="w-2 h-2 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                       <span>{link.name}</span>
+                     </motion.a>
                   </li>
                 ))}
               </ul>
@@ -125,7 +125,7 @@ const FooterSection: React.FC = () => {
                     className={`flex items-center space-x-3 text-gray-400 ${social.color} transition-all duration-300 group`}
                     whileHover={{ x: 5 }}
                   >
-                    <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-indigo-600 transition-colors duration-300">
                       <social.icon className="w-5 h-5" />
                     </div>
                     <div>
@@ -153,14 +153,14 @@ const FooterSection: React.FC = () => {
               </p>
               <p className="text-gray-500 flex items-center justify-center md:justify-start space-x-2">
                 <span>Made with</span>
-                <Heart className="w-4 h-4 text-red-500 animate-pulse" />
+                <Heart className="w-4 h-4 text-indigo-500 animate-pulse" />
                 <span>and lots of</span>
                 <Coffee className="w-4 h-4 text-yellow-500" />
               </p>
             </div>
 
             <div className="text-center">
-              <p className="text-red-400 font-medium mb-2 italic">
+              <p className="text-indigo-400 font-medium mb-2 italic">
                 "Code is poetry in motion, creativity in logic."
               </p>
               <p className="text-gray-500 text-sm">
@@ -171,7 +171,7 @@ const FooterSection: React.FC = () => {
             {/* Back to Top Button */}
             <motion.button
               onClick={scrollToTop}
-              className="w-12 h-12 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="w-12 h-12 bg-indigo-600 hover:bg-indigo-700 rounded-full flex items-center justify-center transition-colors duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -183,7 +183,7 @@ const FooterSection: React.FC = () => {
 
       {/* Floating Elements */}
       <motion.div
-        className="absolute top-10 right-10 w-20 h-20 bg-red-500/10 rounded-full blur-xl"
+        className="absolute top-10 right-10 w-20 h-20 bg-indigo-500/10 rounded-full blur-xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.6, 0.3],
@@ -191,7 +191,7 @@ const FooterSection: React.FC = () => {
         transition={{ duration: 4, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-10 left-10 w-16 h-16 bg-blue-500/10 rounded-full blur-xl"
+        className="absolute bottom-10 left-10 w-16 h-16 bg-indigo-500/5 rounded-full blur-xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.6, 0.3, 0.6],

@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
       title: 'Email',
       value: 'chandy.neat9999@gmail.com',
       link: 'mailto:chandyneat9999@gmail.com',
-      color: 'text-red-500'
+      color: 'text-indigo-600 dark:text-indigo-400'
     },
     {
       icon: Phone,
@@ -81,8 +81,8 @@ const ContactSection: React.FC = () => {
       name: 'Email',
       icon: Mail,
       url: 'mailto:chandyneat9999@gmail.com',
-      color: 'hover:text-red-500',
-      bg: 'hover:bg-red-50 dark:hover:bg-red-900/30'
+      color: 'hover:text-indigo-600',
+      bg: 'hover:bg-indigo-50 dark:hover:bg-indigo-950/20'
     }
   ];
 
@@ -96,9 +96,9 @@ const ContactSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-violet-600 mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
             Let's discuss your next project or just say hello. I'm always excited to connect with fellow developers and potential collaborators.
           </p>
@@ -201,7 +201,7 @@ const ContactSection: React.FC = () => {
             className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <MessageCircle className="w-6 h-6 text-red-500" />
+              <MessageCircle className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                 Send Message
               </h3>
@@ -232,7 +232,7 @@ const ContactSection: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                     placeholder="Your name"
                   />
                 </div>
@@ -246,7 +246,7 @@ const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -262,7 +262,7 @@ const ContactSection: React.FC = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                   placeholder="What's this about?"
                 />
               </div>
@@ -277,7 +277,7 @@ const ContactSection: React.FC = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white resize-none"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </div>
@@ -285,7 +285,7 @@ const ContactSection: React.FC = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-4 px-6 rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-semibold py-4 px-6 rounded-xl hover:from-indigo-700 hover:to-violet-700 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

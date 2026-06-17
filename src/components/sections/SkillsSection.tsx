@@ -56,9 +56,9 @@ const SkillsSection: React.FC = () => {
     {
       category: 'Development Tools',
       icon: Settings,
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-50 dark:bg-orange-900/20',
-      borderColor: 'border-orange-200 dark:border-orange-800',
+      color: 'from-slate-500 to-slate-700',
+      bgColor: 'bg-slate-50 dark:bg-slate-900/20',
+      borderColor: 'border-slate-200 dark:border-slate-800',
       skills: [
         { name: 'Git', level: 80, icon: '🌿' },
         { name: 'VSCode', level: 90, icon: '💻' },
@@ -67,6 +67,23 @@ const SkillsSection: React.FC = () => {
         { name: 'Power BI', level: 50, icon: '📊' },
         { name: 'AWS Cloud', level: 50, icon: '☁️' },
         { name: 'WordPress', level: 70, icon: '𝗪' },
+        { name: 'Xcode', level: 50, icon: '🅧' },
+        { name: 'Android Studio', level: 50, icon: '🤖' },
+      ]
+    },
+    {
+      category: 'Mobile App Development',
+      icon: Zap,
+      color: 'from-pink-500 to-rose-500',
+      bgColor: 'bg-pink-50 dark:bg-pink-900/20',
+      borderColor: 'border-pink-200 dark:border-pink-800',
+      skills: [
+        { name: 'Flutter', level: 70, icon: '🔥' },
+        { name: 'GetX', level: 60, icon: '⚡' },
+        { name: 'Hive', level: 50, icon: '🍯' },
+        { name: 'Firebase', level: 60, icon: '🔥' },
+        { name: 'App Store', level: 60, icon: '📱' },
+        { name: 'Play Store', level: 70, icon: '📲' },
       ]
     }
   ];
@@ -81,9 +98,9 @@ const SkillsSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Skills</span>
+            My <span className="bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">Skills</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-violet-600 mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and proficiency levels
           </p>
@@ -185,21 +202,21 @@ const SkillsSection: React.FC = () => {
               className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
               whileHover={{ y: -5 }}
             >
-              <div className="text-3xl font-bold text-red-500 mb-2">2+</div>
+              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">2+</div>
               <div className="text-gray-600 dark:text-gray-300">Years Learning</div>
             </motion.div>
             <motion.div
               className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
               whileHover={{ y: -5 }}
             >
-              <div className="text-3xl font-bold text-red-500 mb-2">12+</div>
+              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">12+</div>
               <div className="text-gray-600 dark:text-gray-300">Technologies</div>
             </motion.div>
             <motion.div
               className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
               whileHover={{ y: -5 }}
             >
-              <div className="text-3xl font-bold text-red-500 mb-2">10+</div>
+              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">10+</div>
               <div className="text-gray-600 dark:text-gray-300">Projects Built</div>
             </motion.div>
           </div>

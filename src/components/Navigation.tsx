@@ -21,7 +21,7 @@ const NavItem: React.FC<NavItemProps> = ({ section, active, onClick }) => {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-red-500 to-red-600 shadow-md rounded-full transition-all duration-300 flex items-center justify-center h-full"
+          className="px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-violet-600 shadow-md rounded-full transition-all duration-300 flex items-center justify-center h-full"
           style={{ minHeight: '36px' }} // to roughly match button height
         >
           📄 {section.label}
@@ -36,8 +36,8 @@ const NavItem: React.FC<NavItemProps> = ({ section, active, onClick }) => {
         onClick={() => onClick(section.id)}
         className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
           active
-            ? 'bg-red-500 text-white shadow-lg'
-            : 'text-gray-600 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20'
+            ? 'bg-indigo-600 text-white shadow-lg'
+            : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/20'
         }`}
       >
         {section.label}
@@ -90,7 +90,7 @@ const Navigation: React.FC = () => {
 
   return (
     <motion.nav
-      className="fixed top-6 left-1/4 transform -translate-x-1/2 z-40 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-full px-6 py-3 shadow-lg border border-red-200 dark:border-red-800"
+      className="fixed top-6 left-1/4 transform -translate-x-1/2 z-40 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-full px-6 py-3 shadow-lg border border-indigo-100 dark:border-indigo-950"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}

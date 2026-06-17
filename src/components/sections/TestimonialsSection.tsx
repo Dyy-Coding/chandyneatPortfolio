@@ -44,9 +44,9 @@ const TestimonialsSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            <span className="text-red-500">Testimonials</span>
+            <span className="text-indigo-600 dark:text-indigo-400">Testimonials</span>
           </h2>
-          <div className="w-24 h-1 bg-red-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto relative">
@@ -56,7 +56,7 @@ const TestimonialsSection: React.FC = () => {
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <Quote className="w-12 h-12 text-red-500 mb-6" />
+            <Quote className="w-12 h-12 text-indigo-600 dark:text-indigo-400 mb-6" />
             
             <motion.blockquote
               key={currentTestimonial}
@@ -83,7 +83,7 @@ const TestimonialsSection: React.FC = () => {
                   <h4 className="text-lg font-bold text-gray-900 dark:text-white">
                     {testimonials[currentTestimonial].name}
                   </h4>
-                  <p className="text-red-500 font-semibold">
+                  <p className="text-indigo-600 dark:text-indigo-400 font-semibold">
                     {testimonials[currentTestimonial].role}
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm">
@@ -95,7 +95,7 @@ const TestimonialsSection: React.FC = () => {
               <div className="flex space-x-2">
                 <motion.button
                   onClick={prevTestimonial}
-                  className="p-3 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors duration-300"
+                  className="p-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -103,7 +103,7 @@ const TestimonialsSection: React.FC = () => {
                 </motion.button>
                 <motion.button
                   onClick={nextTestimonial}
-                  className="p-3 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors duration-300"
+                  className="p-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -120,7 +120,7 @@ const TestimonialsSection: React.FC = () => {
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentTestimonial
-                    ? 'bg-red-500 w-8'
+                    ? 'bg-indigo-600 w-8'
                     : 'bg-gray-300 dark:bg-gray-600'
                 }`}
               />

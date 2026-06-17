@@ -57,9 +57,9 @@ const InterestsSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="text-red-500">Interests</span>
+            My <span className="text-indigo-600 dark:text-indigo-400">Interests</span>
           </h2>
-          <div className="w-24 h-1 bg-red-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -80,7 +80,7 @@ const InterestsSection: React.FC = () => {
                 {interest.emoji}
               </motion.div>
               
-              <interest.icon className="w-8 h-8 text-red-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <interest.icon className="w-8 h-8 text-indigo-600 dark:text-indigo-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 {interest.title}

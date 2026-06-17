@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github, Code, Globe, Database, Terminal, Palette, CircuitBoard } from 'lucide-react';
+import { ExternalLink, Github, Code, Globe, Database, Terminal, Palette, CircuitBoard, Smartphone } from 'lucide-react';
 
 const ProjectsSection: React.FC = () => {
   const ref = useRef(null);
@@ -16,6 +16,7 @@ const ProjectsSection: React.FC = () => {
     { name: 'Backend', icon: Database, color: 'text-purple-500' },
     { name: 'Design', icon: Palette, color: 'text-pink-500' },
     { name: 'Software', icon: CircuitBoard, color: 'text-pink-500' },
+    { name: 'Mobile Developer', icon: Smartphone, color: 'text-indigo-500' },
   ];
 
   const projects = [
@@ -42,7 +43,7 @@ const ProjectsSection: React.FC = () => {
       status: 'Completed'
     },
      {
-      title: 'Library App',
+      title: 'Library Web App',
       description: 'I developed a Library App using Laravel, MySQL, HTML, and Tailwind CSS, organizing features like book management and borrowing through Laravel’s MVC structure.',
       image: '/project/libraryApp.jpg',
       tech: ['PHP', 'Laravel', 'MySQL',"Vue.js","Tailwind","GitHub"],
@@ -174,13 +175,46 @@ const ProjectsSection: React.FC = () => {
       githubUrl: 'https://github.com/Dyy-Coding/YoutubeInterface.git',
       featured: false,
       status: 'Completed'
+    },
+    // Mock Mobile Projects
+    {
+      title: 'Weather Mobile App',
+      description: 'A mock weather forecasting mobile app showcasing temperature and conditions using a public API.',
+      image: '/project/mock-weather.png',
+      tech: ['Flutter', 'GetX', 'Hive', 'Firebase'],
+      category: 'Mobile Developer',
+      liveUrl: '#',
+      githubUrl: '#',
+      featured: false,
+      status: 'Completed'
+    },
+    {
+      title: 'Movie Tracking App',
+      description: 'A mobile app to track and rate movies, with user authentication and a curated watchlist.',
+      image: '/project/mock-movie.png',
+      tech: ['Flutter', 'GetX', 'Firebase'],
+      category: 'Mobile Developer',
+      liveUrl: '#',
+      githubUrl: '#',
+      featured: false,
+      status: 'Completed'
+    },
+    {
+      title: 'Library Mobile App',
+      description: 'A mobile library management app for browsing, borrowing, and returning books.',
+      image: '/project/libraryapp_benner.jpg',
+      tech: ['Flutter', 'Social Authentication','GetX','Git'],
+      category: 'Mobile Developer',
+      liveUrl: '#',
+      githubUrl: 'https://github.com/Dyy-Coding/library_mobile_app.git',
+      featured: false,
+      status: 'Completed'
     }
-    
   ];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+const filteredProjects = activeFilter === 'All'
+  ? projects
+  : projects.filter(project => project.category === activeFilter);
 
   return (
     <section id="projects" ref={ref} className="py-20 bg-white dark:bg-gray-900">
@@ -192,9 +226,9 @@ const ProjectsSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Projects</span>
+            My <span className="bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-violet-600 mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
             A showcase of my work across different technologies and domains
           </p>
@@ -213,8 +247,8 @@ const ProjectsSection: React.FC = () => {
               onClick={() => setActiveFilter(category.name)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeFilter === category.name
-                  ? 'bg-red-500 text-white shadow-lg'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-red-100 dark:hover:bg-red-900/30'
+                  ? 'bg-indigo-600 text-white shadow-lg'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-950/20'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -262,7 +296,7 @@ const ProjectsSection: React.FC = () => {
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   <motion.a
                     href={project.liveUrl}
-                    className="p-3 bg-white rounded-full text-gray-900 hover:bg-red-500 hover:text-white transition-colors duration-300"
+                    className="p-3 bg-white rounded-full text-gray-900 hover:bg-indigo-600 hover:text-white transition-colors duration-300"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -270,7 +304,7 @@ const ProjectsSection: React.FC = () => {
                   </motion.a>
                   <motion.a
                     href={project.githubUrl}
-                    className="p-3 bg-white rounded-full text-gray-900 hover:bg-red-500 hover:text-white transition-colors duration-300"
+                    className="p-3 bg-white rounded-full text-gray-900 hover:bg-indigo-600 hover:text-white transition-colors duration-300"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -302,7 +336,7 @@ const ProjectsSection: React.FC = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-xs font-medium"
+                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-medium"
                     >
                       {tech}
                     </span>
@@ -331,7 +365,7 @@ const ProjectsSection: React.FC = () => {
               className="text-center bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl"
               whileHover={{ y: -5, scale: 1.02 }}
             >
-              <stat.icon className="w-8 h-8 text-red-500 mx-auto mb-3" />
+              <stat.icon className="w-8 h-8 text-indigo-600 dark:text-indigo-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
                 {stat.value}
               </div>

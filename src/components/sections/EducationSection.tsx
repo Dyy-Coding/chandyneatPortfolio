@@ -37,14 +37,14 @@ const EducationSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="text-red-500">Education</span>
+            My <span className="text-indigo-600 dark:text-indigo-400">Education</span>
           </h2>
-          <div className="w-24 h-1 bg-red-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-red-500"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-indigo-600"></div>
             
             {education.map((item, index) => (
               <motion.div
@@ -54,17 +54,17 @@ const EducationSection: React.FC = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <div className="absolute left-6 w-4 h-4 bg-red-500 rounded-full border-4 border-white dark:border-gray-800"></div>
+                <div className="absolute left-6 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white dark:border-gray-800"></div>
                 
                 <div className="ml-20 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg w-full">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <item.icon className="w-8 h-8 text-red-500" />
+                      <item.icon className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                           {item.title}
                         </h3>
-                        <p className="text-red-500 font-semibold">
+                        <p className="text-indigo-600 dark:text-indigo-400 font-semibold">
                           {item.institution}
                         </p>
                       </div>
@@ -83,7 +83,7 @@ const EducationSection: React.FC = () => {
                     {item.achievements.map((achievement) => (
                       <span
                         key={achievement}
-                        className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-indigo-100 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium"
                       >
                         {achievement}
                       </span>

@@ -9,7 +9,7 @@ const ThemeToggle: React.FC = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-40 w-14 h-14 bg-white dark:bg-gray-800 rounded-full shadow-lg border-2 border-red-500 flex items-center justify-center transition-colors duration-300"
+      className="fixed top-6 right-6 z-40 w-14 h-14 bg-white dark:bg-gray-800 rounded-full shadow-lg border-2 border-indigo-600 dark:border-indigo-400 flex items-center justify-center transition-colors duration-300"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       initial={{ opacity: 0, y: -20 }}
@@ -22,9 +22,9 @@ const ThemeToggle: React.FC = () => {
         transition={{ duration: 0.3 }}
       >
         {isDark ? (
-          <Moon className="w-6 h-6 text-red-500" />
+          <Moon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
         ) : (
-          <Sun className="w-6 h-6 text-red-500" />
+          <Sun className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
         )}
       </motion.div>
     </motion.button>

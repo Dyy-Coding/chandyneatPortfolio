@@ -20,9 +20,9 @@ const AboutSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            About <span className="text-red-500">Me</span>
+            About <span className="text-indigo-600 dark:text-indigo-400">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-red-500 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -56,13 +56,13 @@ const AboutSection: React.FC = () => {
             className="space-y-6 text-center md:text-left"
           >
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              I'm a passionate <strong className="text-red-500">full-stack developer</strong> with a strong curiosity
+              I'm a passionate <strong className="text-indigo-600 dark:text-indigo-400">Software Engineer</strong> with a strong curiosity
               for technology and innovation. My journey began with a fascination for how websites function,
               pushing me to explore deeply into the world of web development.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              Currently studying at <span className="text-red-500 font-semibold">Passerelles Numériques Cambodia</span>,
+              Currently studying at <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Passerelles Numériques Cambodia</span>,
               I thrive on building meaningful digital experiences. I'm committed to transforming ideas into beautiful, functional realities.
             </p>
 
@@ -76,7 +76,7 @@ const AboutSection: React.FC = () => {
               {['Creative Problem Solver', 'Team Player', 'Quick Learner', 'Detail Oriented'].map((trait, index) => (
                 <motion.span
                   key={trait}
-                  className="px-4 py-2 bg-red-100 dark:bg-red-800/30 text-red-800 dark:text-red-200 rounded-full text-sm font-medium shadow-sm backdrop-blur-md"
+                  className="px-4 py-2 bg-indigo-100 dark:bg-indigo-950/30 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium shadow-sm backdrop-blur-md"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ type: 'spring', delay: 0.6 + index * 0.1 }}

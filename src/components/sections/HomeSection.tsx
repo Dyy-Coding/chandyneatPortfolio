@@ -8,24 +8,24 @@ const HomeSection: React.FC = () => {
     { name: 'CSS', image: '/tech/css.jpg', alt: 'CSS', bg: 'bg-blue-100 dark:bg-blue-900/30' },
     { name: 'JavaScript', image: '/tech/vscode.jpg', alt: 'JavaScript', bg: 'bg-yellow-100 dark:bg-yellow-900/30' },
     { name: 'Vue.js', image: '/tech/php.jpg', alt: 'Vue.js', bg: 'bg-green-100 dark:bg-green-900/30' },
-    { name: 'Laravel', image: '/tech/github.jpg', alt: 'Laravel', bg: 'bg-red-100 dark:bg-red-900/30' },
+    { name: 'Laravel', image: '/tech/github.jpg', alt: 'Laravel', bg: 'bg-indigo-100 dark:bg-indigo-950/30' },
     { name: 'Node.js', image: '/tech/python.jpg', alt: 'Node.js', bg: 'bg-green-100 dark:bg-green-900/30' },
   ];
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-indigo-50/20 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-950/10"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-red-500/5 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl"
           animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
           transition={{ duration: 20, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-slate-500/5 rounded-full blur-3xl"
           animate={{ x: [0, -80, 0], y: [0, 60, 0] }}
           transition={{ duration: 25, repeat: Infinity }}
         />
@@ -63,7 +63,7 @@ const HomeSection: React.FC = () => {
             >
               Hi, I'm{' '}
               <motion.span
-                className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent"
                 animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
@@ -80,11 +80,11 @@ const HomeSection: React.FC = () => {
               <h2 className="text-2xl md:text-3xl lg:text-4xl text-gray-600 dark:text-gray-300 mb-4 font-light">
                 A Passionate{' '}
                 <motion.span
-                  className="text-red-500 font-semibold"
+                  className="text-indigo-600 dark:text-indigo-400 font-semibold"
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  Web Developer
+                  Software Engineer
                 </motion.span>
               </h2>
               <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
@@ -100,7 +100,7 @@ const HomeSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <motion.button
-                className="px-8 py-4 bg-red-500 text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="px-8 py-4 bg-indigo-600 text-white rounded-full font-semibold text-lg shadow-lg hover:bg-indigo-700 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
@@ -110,7 +110,7 @@ const HomeSection: React.FC = () => {
                 View My Work
               </motion.button>
               <motion.button
-                className="px-8 py-4 border-2 border-red-500 text-red-500 rounded-full font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 rounded-full font-semibold text-lg hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-400 dark:hover:text-slate-900 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
@@ -135,7 +135,7 @@ const HomeSection: React.FC = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-red-400 to-red-600 p-2">
+                <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-indigo-500 to-violet-600 p-2">
                   <img
                     src="/homeprofile.jpg"
                     alt="Chandy Neat"
@@ -182,7 +182,7 @@ const HomeSection: React.FC = () => {
 
               {/* Orbiting Ring */}
               <motion.div
-                className="absolute inset-0 border-2 border-red-500/30 rounded-full"
+                className="absolute inset-0 border-2 border-indigo-500/30 rounded-full"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
                 style={{ width: '120%', height: '120%', left: '-10%', top: '-10%' }}
@@ -204,7 +204,7 @@ const HomeSection: React.FC = () => {
             className="flex flex-col items-center space-y-2"
           >
             <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">Scroll Down</span>
-            <ChevronDown className="w-6 h-6 text-red-500" />
+            <ChevronDown className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
           </motion.div>
         </motion.div>
       </div>
