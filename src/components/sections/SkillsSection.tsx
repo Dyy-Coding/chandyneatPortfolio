@@ -190,37 +190,6 @@ const SkillsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Skills Summary */}
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <motion.div
-              className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
-              whileHover={{ y: -5 }}
-            >
-              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">2+</div>
-              <div className="text-gray-600 dark:text-gray-300">Years Learning</div>
-            </motion.div>
-            <motion.div
-              className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
-              whileHover={{ y: -5 }}
-            >
-              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">12+</div>
-              <div className="text-gray-600 dark:text-gray-300">Technologies</div>
-            </motion.div>
-            <motion.div
-              className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
-              whileHover={{ y: -5 }}
-            >
-              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">10+</div>
-              <div className="text-gray-600 dark:text-gray-300">Projects Built</div>
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
