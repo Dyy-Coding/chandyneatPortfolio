@@ -176,26 +176,14 @@ const ProjectsSection: React.FC = () => {
       featured: false,
       status: 'Completed'
     },
-    // Mock Mobile Projects
-    {
-      title: 'Weather Mobile App',
-      description: 'A mock weather forecasting mobile app showcasing temperature and conditions using a public API.',
-      image: '/project/mock-weather.png',
-      tech: ['Flutter', 'GetX', 'Hive', 'Firebase'],
-      category: 'Mobile Developer',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false,
-      status: 'Completed'
-    },
     {
       title: 'Movie Tracking App',
       description: 'A mobile app to track and rate movies, with user authentication and a curated watchlist.',
-      image: '/project/mock-movie.png',
-      tech: ['Flutter', 'GetX', 'Firebase'],
+      image: '/project/movie_tracking_app.jpg',
+      tech: ['Flutter', 'GetX','Social Authentication','Git'],
       category: 'Mobile Developer',
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Dyy-Coding/Movie_series_tracking.git',
       featured: false,
       status: 'Completed'
     },

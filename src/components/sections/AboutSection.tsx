@@ -56,24 +56,25 @@ const AboutSection: React.FC = () => {
             className="space-y-6 text-center md:text-left"
           >
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              I'm a passionate <strong className="text-indigo-600 dark:text-indigo-400">Software Engineer</strong> with a strong curiosity
-              for technology and innovation. My journey began with a fascination for how websites function,
-              pushing me to explore deeply into the world of web development.
+              My software engineering journey originally began with a strong fascination for web development, focusing on building responsive digital experiences. However, during my **professional internship**, I discovered the immense potential of modern mobile frameworks and successfully shifted my path into mobile development.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              Currently studying at <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Passerelles Numériques Cambodia</span>,
-              I thrive on building meaningful digital experiences. I'm committed to transforming ideas into beautiful, functional realities.
+              Today, I work as a **full-time Mobile App Developer** at my current company, specializing in building high-fidelity cross-platform applications using <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Flutter & Dart</span>. I actively deliver intelligent, AI-enhanced solutions that combine clean code with exceptional performance.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              I value clean code, elegant design, and the impact of tech. When I'm not coding,
-              you'll find me learning new frameworks, watching tech documentaries, or gaming with friends.
+              I excel at bridging the gap between sophisticated backend systems and pixel-perfect user interfaces, thriving in fast-paced environments where I collaborate closely with UI/UX designers and backend teams to turn complex logic into smooth client-side realities.
             </p>
 
             {/* Traits */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-4">
-              {['Creative Problem Solver', 'Team Player', 'Quick Learner', 'Detail Oriented'].map((trait, index) => (
+              {[
+                'Flutter & Dart Specialist',
+                'Web & Mobile Background',
+                'Cross-Functional Team Player',
+                'AI Integration & Clean Code',
+              ].map((trait, index) => (
                 <motion.span
                   key={trait}
                   className="px-4 py-2 bg-indigo-100 dark:bg-indigo-950/30 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium shadow-sm backdrop-blur-md"
