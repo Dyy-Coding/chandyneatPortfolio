@@ -1,98 +1,75 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Linkedin, Send, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Linkedin, Send, ArrowUpRight, Sparkles } from 'lucide-react';
 
 const HomeSection: React.FC = () => {
-  // Badges tailored to your engineering background and profile style
-  const profileBadges = [
-    'Mobile App Developer',
-    'Flutter Specialist',
-    'Cambodia',
-    'ASEAN',
-    'Global Market',
-  ];
-
-  // Inline tech tags matching the frosted aesthetic to unify both sides
   const techStack = ['Flutter', 'Dart', 'React', 'TypeScript', 'Node.js', 'REST APIs'];
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-indigo-50/20 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-950/10"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white dark:bg-slate-950"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl"
-          animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
-          transition={{ duration: 20, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-slate-500/5 rounded-full blur-3xl"
-          animate={{ x: [0, -80, 0], y: [0, 60, 0] }}
-          transition={{ duration: 25, repeat: Infinity }}
-        />
+      {/* Vast, soft, clean background gradients */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-indigo-50/50 to-transparent dark:from-indigo-950/20" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-16 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto px-6 relative z-10 py-20">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           
-          {/* Left Column - Upgraded to match Right Profile Card Style */}
+          {/* Left Column */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center lg:text-left order-2 lg:order-1 lg:col-span-5 flex flex-col justify-center"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center lg:text-left order-2 lg:order-1 lg:col-span-6 flex flex-col justify-center"
           >
             {/* Premium Mini Badge Header */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center justify-center lg:justify-start gap-2 mb-6"
             >
-              <span className="flex items-center gap-1.5 px-4 py-1.5 bg-indigo-50/80 dark:bg-indigo-950/40 border border-indigo-200/60 dark:border-indigo-800/60 text-indigo-700 dark:text-indigo-400 rounded-full text-xs font-bold tracking-wide backdrop-blur-sm shadow-sm">
-                <Sparkles className="w-3.5 h-3.5" /> Available For New Roles
+              <span className="flex items-center gap-1.5 px-4 py-1.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 rounded-full text-xs font-semibold tracking-wide shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-indigo-500" /> Available For New Roles
               </span>
             </motion.div>
 
             {/* Bold Premium Heading */}
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white mb-6 leading-none tracking-tight"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white mb-6 leading-tight tracking-tight"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >
               Hi, I'm <br />
-              <motion.span
-                className="bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-500 dark:from-indigo-400 dark:via-purple-400 dark:to-rose-400 bg-clip-text text-transparent"
-                animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-400">
                 Chandy Neat
-              </motion.span>
+              </span>
             </motion.h1>
 
             {/* Structured Subheadings & Tech Stack */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="mb-10"
             >
-              <h2 className="text-2xl md:text-3xl text-slate-700 dark:text-slate-300 mb-4 font-medium tracking-tight">
+              <h2 className="text-2xl md:text-3xl text-slate-700 dark:text-slate-200 mb-4 font-medium tracking-tight">
                 Software Engineer
               </h2>
-              <p className="text-base md:text-lg text-slate-500 dark:text-gray-400 max-w-xl leading-relaxed mb-6 font-normal">
+              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-xl leading-relaxed mb-8 mx-auto lg:mx-0">
                 Engineering premium, production-ready interactive mobile and web architectures. Specialized in crafting native-fidelity applications that scale efficiently.
               </p>
 
-              {/* Core Technologies styled exactly like Profile Card Badges */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2 max-w-md">
+              {/* Core Technologies */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2 max-w-md mx-auto lg:mx-0">
                 {techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 text-slate-600 dark:text-slate-400 rounded-lg text-xs font-semibold"
+                    className="px-4 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 rounded-lg text-xs font-medium shadow-sm hover:border-indigo-300 dark:hover:border-indigo-700 transition-colors cursor-default"
                   >
                     {tech}
                   </span>
@@ -100,115 +77,77 @@ const HomeSection: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Upgraded CTA Action Buttons */}
+            {/* Upgraded CTA Action Buttons & Socials */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              initial={{ opacity: 0, y: 30 }}
+              className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start items-center"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <motion.button
-                className="group flex items-center justify-center gap-2 px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold text-base shadow-lg shadow-indigo-600/20 hover:bg-indigo-700 transition-all duration-300"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
+              <button
+                className="group flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-bold text-base shadow-xl shadow-slate-900/10 dark:shadow-white/10 hover:scale-[1.02] active:scale-[0.98] transition-all w-full sm:w-auto"
                 onClick={() =>
                   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
                 }
               >
                 Explore Projects
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </motion.button>
+              </button>
               
-              <motion.button
-                className="px-8 py-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 rounded-2xl font-bold text-base hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-300"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() =>
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-                }
-              >
-                Get In Touch
-              </motion.button>
+              <div className="flex gap-3">
+                <a
+                  href="https://www.linkedin.com/in/chandy-neat-ab1160371"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center w-14 h-14 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 rounded-2xl hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-200 dark:hover:border-blue-900 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all shadow-sm"
+                  title="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://t.me/chandy_neat"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center w-14 h-14 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 rounded-2xl hover:text-[#3290ec] dark:hover:text-[#3290ec] hover:border-blue-200 dark:hover:border-blue-900 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all shadow-sm"
+                  title="Telegram"
+                >
+                  <Send className="w-5 h-5" />
+                </a>
+              </div>
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Profile Card */}
+          {/* Right Column - New Soft, Minimalist Floating Style */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="order-1 lg:order-2 flex justify-center w-full lg:col-span-7"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            className="order-1 lg:order-2 flex justify-center w-full lg:col-span-6 relative"
           >
-            <div className="relative w-full max-w-lg lg:max-w-xl lg:h-[750px] rounded-[2.5rem] overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-2xl border border-slate-200/50 dark:border-slate-700/50 p-1">
+            <div className="relative w-full max-w-sm lg:max-w-md aspect-[3/4] mx-auto">
               
-              {/* Photo Background Layer */}
-              <div className="absolute inset-0 z-0">
+              {/* Soft Ambient Glow Behind Image */}
+              <div className="absolute -inset-6 bg-gradient-to-tr from-blue-100 via-indigo-50 to-purple-100 dark:from-indigo-900/40 dark:via-slate-800 dark:to-purple-900/40 blur-3xl opacity-60 rounded-full" />
+
+              {/* Main Image Container - Smooth Floating Animation */}
+              <motion.div 
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-10 w-full h-full rounded-[2rem] overflow-hidden bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] border border-slate-100 dark:border-slate-800 group"
+              >
                 <img
                   src="/homeprofile.jpg"
                   alt="Chandy Neat"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 via-25% to-transparent dark:from-slate-900 dark:via-slate-900/60" />
-              </div>
-
-              {/* Decorative Custom Frame Corners from image_63dd22.jpg[cite: 1] */}
-              <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-indigo-500 rounded-tl-xl z-10" />
-              <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-rose-400 rounded-br-xl z-10" />
-
-              {/* Card Text Content Layer[cite: 1] */}
-              <div className="absolute inset-0 flex flex-col justify-end p-10 z-10">
-                <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-1">
-                  Chandy Neat
-                </h2>
                 
-                <h3 className="text-indigo-600 dark:text-indigo-400 font-bold text-lg mb-1">
-                  Mobile App Developer
-                </h3>
-                
-                <p className="text-slate-700 dark:text-slate-300 font-medium text-base mb-5">
-                  Software Engineer · Flutter Developer
-                </p>
-
-                {/* Styled pill badges matching image_63dd22.jpg layout[cite: 1] */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {profileBadges.map((badge) => (
-                    <span
-                      key={badge}
-                      className="px-4 py-1.5 bg-indigo-50/90 dark:bg-indigo-950/50 border border-indigo-200/60 dark:border-indigo-800/60 text-indigo-800 dark:text-indigo-300 rounded-full text-xs font-semibold backdrop-blur-sm shadow-sm"
-                    >
-                      {badge}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Social Action Link Buttons[cite: 1] */}
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href="https://www.linkedin.com/in/chandy-neat-b26423372/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold shadow-md shadow-blue-500/20 transition-all duration-300"
-                  >
-                    <Linkedin className="w-4 h-4 fill-current" />
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://t.me/chandyneat"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-[#3290ec] hover:bg-[#287ecf] text-white rounded-xl text-sm font-bold shadow-md shadow-blue-400/20 transition-all duration-300"
-                  >
-                    <Send className="w-4 h-4 fill-current" />
-                    Telegram
-                  </a>
-                </div>
-              </div>
+                {/* Minimalist Inner Shadow for depth */}
+                <div className="absolute inset-0 border border-black/5 dark:border-white/5 rounded-[2rem] pointer-events-none" />
+              </motion.div>
 
             </div>
           </motion.div>
         </div>
-
-        
       </div>
     </section>
   );
