@@ -1,8 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Code, Database, Globe, Terminal, GitBranch, Settings, Zap, Layers } from 'lucide-react';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { Globe, Terminal, Database, Settings, Zap, Sparkles } from 'lucide-react';
 
 const SkillsSection: React.FC = () => {
   const ref = useRef(null);
@@ -10,181 +8,144 @@ const SkillsSection: React.FC = () => {
 
   const skillCategories = [
     {
-      category: 'Frontend Development',
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-50 dark:bg-blue-900/20',
-      borderColor: 'border-blue-200 dark:border-blue-800',
-      skills: [
-        { name: 'HTML5', level: 90, icon: '🌐' },
-        { name: 'CSS3', level: 85, icon: '🎨' },
-        { name: 'JavaScript', level: 80, icon: '⚡' },
-        { name: 'Vue.js', level: 75, icon: '💚' },
-        { name: 'Next.js', level: 40, icon: '📦' },
-        { name: 'Tailwind CSS', level: 70, icon: '🌀' }, // Swirl for Tailwind
-      
-      ]
-    },
-    {
-      category: 'Backend Development',
-      icon: Terminal,
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-50 dark:bg-green-900/20',
-      borderColor: 'border-green-200 dark:border-green-800',
-      skills: [
-                { name: 'PHP', level: 80, icon: '🐘' },          // Elephant mascot
-                { name: 'Laravel', level: 75, icon: '🚀' },      // Rocket for speed/framework
-                { name: 'Node.js', level: 55, icon: '🌿' },      // Green leaf for JS/eco
-                { name: 'TypeScript', level: 55, icon: '🟦' },   // Blue square matches TS color
-                { name: 'Java', level: 40, icon: '☕' },           // Coffee cup = Java
-                { name: 'Spring Boot', level: 30, icon: '🌱' },    // Seedling = Spring Boot
-                { name: 'Python', level: 50, icon: '🐍' }        // Snake mascot
-              ]
-
-    },
-    {
-      category: 'Database Management',
-      icon: Database,
-      color: 'from-purple-500 to-violet-500',
-      bgColor: 'bg-purple-50 dark:bg-purple-900/20',
-      borderColor: 'border-purple-200 dark:border-purple-800',
-      skills: [
-        { name: 'MySQL', level: 85, icon: '🗄️' },
-        { name: 'PostgresQL', level: 50, icon: '🐘' },
-      ]
-    },
-    {
-      category: 'Development Tools',
-      icon: Settings,
-      color: 'from-slate-500 to-slate-700',
-      bgColor: 'bg-slate-50 dark:bg-slate-900/20',
-      borderColor: 'border-slate-200 dark:border-slate-800',
-      skills: [
-        { name: 'Git', level: 80, icon: '🌿' },
-        { name: 'VSCode', level: 90, icon: '💻' },
-        { name: 'Postman', level: 75, icon: '📮' },
-        { name: 'Jira', level: 50, icon: '📋' },
-        { name: 'Power BI', level: 50, icon: '📊' },
-        { name: 'AWS Cloud', level: 50, icon: '☁️' },
-        { name: 'WordPress', level: 70, icon: '𝗪' },
-        { name: 'Xcode', level: 50, icon: '🅧' },
-        { name: 'Android Studio', level: 50, icon: '🤖' },
-      ]
-    },
-    {
       category: 'Mobile App Development',
       icon: Zap,
-      color: 'from-pink-500 to-rose-500',
-      bgColor: 'bg-pink-50 dark:bg-pink-900/20',
-      borderColor: 'border-pink-200 dark:border-pink-800',
+      color: 'from-pink-500 via-rose-500 to-amber-500',
+      glowColor: 'bg-rose-500/10',
       skills: [
-        { name: 'Flutter', level: 70, icon: '🔥' },
-        { name: 'GetX', level: 60, icon: '⚡' },
-        { name: 'Hive', level: 50, icon: '🍯' },
-        { name: 'Firebase', level: 60, icon: '🔥' },
-        { name: 'App Store', level: 60, icon: '📱' },
-        { name: 'Play Store', level: 70, icon: '📲' },
+        { name: 'Flutter', level: 90, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+        { name: 'Dart', level: 90, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
+        { name: 'Firebase', level: 85, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg' },
+        { name: 'Android Studio', level: 80, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg' },
+        { name: 'Xcode', level: 75, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg' },
+      ]
+    },
+    {
+      category: 'Frontend & UI Engineering',
+      icon: Globe,
+      color: 'from-blue-600 via-indigo-600 to-purple-600',
+      glowColor: 'bg-indigo-500/10',
+      skills: [
+        { name: 'HTML5', level: 90, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS3', level: 85, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'JavaScript', level: 85, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+        { name: 'TypeScript', level: 80, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+        { name: 'React', level: 75, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Tailwind CSS', level: 90, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+      ]
+    },
+    {
+      category: 'Backend & Frameworks',
+      icon: Terminal,
+      color: 'from-emerald-500 via-teal-500 to-cyan-500',
+      glowColor: 'bg-emerald-500/10',
+      skills: [
+        { name: 'PHP', level: 80, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+        { name: 'Laravel', level: 85, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original-wordmark.svg' },
+        { name: 'Node.js', level: 75, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'MySQL', level: 85, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'Git', level: 85, logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
       ]
     }
   ];
 
   return (
-    <section id="skills" ref={ref} className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="skills" ref={ref} className="py-24 bg-white dark:bg-gray-900 transition-colors duration-500 relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        
+        {/* Heading Section updated to premium style */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">Skills</span>
+       
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+            Technical <span className="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Proficiency</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-violet-600 mx-auto rounded-full"></div>
-          <p className="text-gray-600 dark:text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and proficiency levels
+          <div className="w-16 h-1 bg-indigo-600 dark:bg-indigo-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-slate-500 dark:text-slate-400 text-base md:text-lg max-w-2xl mx-auto font-normal">
+            A verified look at my system stacks, deployment technologies, and application development workflows.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        {/* Upgraded 3-Column Layout with Profile Card Styles */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
-              className={`${category.bgColor} ${category.borderColor} border-2 p-6 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}
+              className="bg-white/80 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 p-8 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden backdrop-blur-md"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ duration: 0.8, delay: categoryIndex * 0.15 }}
+              whileHover={{ y: -6 }}
             >
-              {/* Background Gradient */}
-              <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${category.color} opacity-10 rounded-full blur-xl`}></div>
+              {/* Soft Ambient Background Glow Circles matching layout architecture */}
+              <div className={`absolute -top-10 -right-10 w-32 h-32 ${category.glowColor} rounded-full blur-3xl z-0`}></div>
               
-              <div className="relative z-10">
-                <div className="text-center mb-6">
-                  <motion.div
-                    className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg`}
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <category.icon className="w-8 h-8 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
+              <div className="relative z-10 h-full flex flex-col">
+                
+                {/* Header Container */}
+                <div className="flex items-center gap-4 mb-8 pb-4 border-b border-slate-100 dark:border-slate-800/80">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center shadow-md`}>
+                    <category.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                     {category.category}
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                {/* Skills Progress Matrix */}
+                <div className="space-y-5 flex-grow">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.6, delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
+                      transition={{ duration: 0.5, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
                     >
+                      {/* Skill Identity Block */}
                       <div className="flex justify-between items-center mb-2">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-lg">{skill.icon}</span>
-                          <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                        <div className="flex items-center gap-2.5">
+                          {/* Circle Photo/Logo container frame */}
+                          <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 p-1.5 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0">
+                            <img 
+                              src={skill.logo} 
+                              alt={`${skill.name} logo`}
+                              className="w-full h-full object-contain"
+                              onError={(e) => {
+                                // Fallback if image fails to render smoothly
+                                e.currentTarget.style.display = 'none';
+                              }}
+                            />
+                          </div>
+                          <span className="text-sm font-bold text-slate-700 dark:text-slate-300 tracking-tight">
                             {skill.name}
                           </span>
                         </div>
-                        <motion.span
-                          className={`text-sm font-bold bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}
-                          initial={{ opacity: 0 }}
-                          animate={isInView ? { opacity: 1 } : {}}
-                          transition={{ duration: 0.8, delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.5 }}
-                        >
+                        <span className={`text-xs font-black bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}>
                           {skill.level}%
-                        </motion.span>
+                        </span>
                       </div>
                       
-                      <div className="relative">
-                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                          <motion.div
-                            className={`h-full bg-gradient-to-r ${category.color} rounded-full relative`}
-                            initial={{ width: 0 }}
-                            animate={isInView ? { width: `${skill.level}%` } : {}}
-                            transition={{
-                              duration: 1.2,
-                              delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.8,
-                              ease: "easeOut"
-                            }}
-                          >
-                            <motion.div
-                              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                              animate={{ x: [-100, 200] }}
-                              transition={{ 
-                                duration: 2, 
-                                repeat: Infinity, 
-                                delay: categoryIndex * 0.2 + skillIndex * 0.1 + 2 
-                              }}
-                            />
-                          </motion.div>
-                        </div>
+                      {/* Premium Clean Progress Bar Line */}
+                      <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                        <motion.div
+                          className={`h-full bg-gradient-to-r ${category.color} rounded-full`}
+                          initial={{ width: 0 }}
+                          animate={isInView ? { width: `${skill.level}%` } : {}}
+                          transition={{
+                            duration: 1.2,
+                            delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.3,
+                            ease: "easeOut"
+                          }}
+                        />
                       </div>
                     </motion.div>
                   ))}
                 </div>
+
               </div>
             </motion.div>
           ))}
