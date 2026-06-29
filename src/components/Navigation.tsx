@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sun, Moon } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface NavItemProps {
   section: { id: string; label: string };
@@ -63,6 +65,7 @@ const NavItem: React.FC<NavItemProps> = ({ section, active, onClick, onClose }) 
 const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
   const sections = [
     { id: 'home', label: 'Home' },
@@ -108,33 +111,59 @@ const Navigation: React.FC = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const ThemeButton = () => (
+    <motion.button
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+      className="shrink-0 w-9 h-9 rounded-full border-2 border-indigo-500 dark:border-indigo-400 bg-white dark:bg-gray-800 flex items-center justify-center transition-colors duration-300 hover:bg-indigo-50 dark:hover:bg-gray-700"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      <motion.div
+        initial={false}
+        animate={{ rotate: isDark ? 180 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        {isDark ? (
+          <Moon className="w-4 h-4 text-indigo-400" />
+        ) : (
+          <Sun className="w-4 h-4 text-indigo-600" />
+        )}
+      </motion.div>
+    </motion.button>
+  );
+
   return (
     <motion.nav
       id="main-nav"
-      className="fixed top-4 inset-x-4 z-40 mx-auto max-w-4xl"
+      className="fixed top-4 inset-x-4 z-40 mx-auto max-w-5xl"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      {/* ── Desktop / large tablet — lg and up ── */}
-      <div className="hidden lg:block bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-full px-4 py-2 shadow-lg border border-indigo-100 dark:border-indigo-950">
-        <ul className="flex items-center gap-1 overflow-x-auto scrollbar-none">
-          {sections.map((section) => (
-            <NavItem
-              key={section.id}
-              section={section}
-              active={activeSection === section.id}
-              onClick={scrollToSection}
-            />
-          ))}
-        </ul>
+      {/* ── Desktop — lg and up: nav pill + theme toggle side by side ── */}
+      <div className="hidden lg:flex items-center gap-3">
+        <div className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-full px-4 py-2 shadow-lg border border-indigo-100 dark:border-indigo-950">
+          <ul className="flex items-center gap-1 overflow-x-auto scrollbar-none">
+            {sections.map((section) => (
+              <NavItem
+                key={section.id}
+                section={section}
+                active={activeSection === section.id}
+                onClick={scrollToSection}
+              />
+            ))}
+          </ul>
+        </div>
+        <ThemeButton />
       </div>
 
-      {/* ── Mobile / tablet — below lg ── */}
-      <div className="lg:hidden bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl px-4 py-3 shadow-lg border border-indigo-100 dark:border-indigo-950 flex items-center justify-between">
-        <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+      {/* ── Mobile / tablet — below lg: pill bar with active label + hamburger + theme ── */}
+      <div className="lg:hidden bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl px-4 py-3 shadow-lg border border-indigo-100 dark:border-indigo-950 flex items-center gap-3">
+        <span className="flex-1 text-sm font-semibold text-indigo-600 dark:text-indigo-400">
           {sections.find((s) => s.id === activeSection)?.label ?? 'Menu'}
         </span>
+        <ThemeButton />
         <button
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle navigation menu"

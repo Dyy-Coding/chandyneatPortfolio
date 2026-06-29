@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Loader from './components/Loader';
 import Navigation from './components/Navigation';
-import ThemeToggle from './components/ThemeToggle';
 import HomeSection from './components/sections/HomeSection';
 import AboutSection from './components/sections/AboutSection';
 import SkillsSection from './components/sections/SkillsSection';
@@ -28,7 +27,6 @@ function App() {
         {!loading && (
           <>
             <Navigation />
-            <ThemeToggle />
             <main>
               <HomeSection />
               <AboutSection />
